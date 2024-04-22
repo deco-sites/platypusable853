@@ -10,7 +10,7 @@ export interface Logo {
   link?: string;
 }
 
-interface Listing {
+export interface Listing {
   id: string;
   price: number;
   address: {
