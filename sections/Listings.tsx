@@ -45,10 +45,10 @@ export async function loader(_req: Request) {
 }
 
 export default function Listings({
-  listingsLoader = [],
+  listingsLoader,
 }: SectionProps<typeof loader>) {
   console.log({ listingsLoader });
-  if (!listingsLoader.length) return <h1>Sem listings</h1>;
+  if (!listingsLoader?.length) return <h1>Sem listings</h1>;
 
   return (
     <div className="container mt-12">
